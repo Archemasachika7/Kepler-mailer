@@ -131,7 +131,7 @@ export default function MailBot() {
         failCount++;
         setLog((prev) => [{ email, status: "failed", timestamp: new Date().toISOString(), subject, error: err.message }, ...prev]);
       }
-      await new Promise((r) => setTimeout(r, 500));
+      await new Promise((r) => setTimeout(r, 4000));
     }
 
     setSending(false);
